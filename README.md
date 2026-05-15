@@ -1,6 +1,6 @@
 # BridgeProt: Bridging Free-Form Generation and Explicit Pair Prediction for Emotion-Cause Pair Extraction
 
-![BridgeProt Framework](figures/framework.png)
+This repository will be released publicly, including code and data.
 
 ## Overview
 
@@ -265,87 +265,3 @@ BridgeProt/
     └── mecad_results.json
 ```
 
----
-
-## Usage
-
-### 1. Prepare Data
-
-Place the processed datasets under the `data/` directory:
-
-```text
-data/
-├── ECF/
-├── MEC4/
-└── MECAD/
-```
-
-### 2. Run Zero-Shot Inference
-
-```bash
-bash scripts/run_zero_shot.sh
-```
-
-### 3. Run Three-Shot Inference
-
-```bash
-bash scripts/run_three_shot.sh
-```
-
-### 4. Run LoRA Training and Inference
-
-```bash
-bash scripts/run_lora.sh
-```
-
-### 5. Run Supervised Fine-Tuning
-
-```bash
-bash scripts/run_sft.sh
-```
-
-### 6. Evaluate Predictions
-
-```bash
-python src/evaluation.py \
-  --pred results/ecf_results.json \
-  --gold data/ECF/test.json
-```
-
-The evaluator reports:
-
-- Emotion Precision / Recall / F1
-- Cause Precision / Recall / F1
-- Pair Precision / Recall / F1
-- Structural Validity
-
----
-
-## Key Takeaways
-
-- Free-form generation is difficult to align with ECPE evaluation.
-- BridgeProt converts generative prediction into explicit structured pair prediction.
-- The method achieves strong ECPE performance while maintaining 100% structural validity.
-- Decision-only structured output is more reliable than explanation-augmented output.
-- BridgeProt is especially effective on challenging multimodal ECPE benchmarks.
-
----
-
-## Citation
-
-If you find this work useful, please cite:
-
-```bibtex
-@article{xia2026bridgeprot,
-  title={Bridging Free-Form Generation and Explicit Pair Prediction for Emotion-Cause Pair Extraction},
-  author={Xia, Yan and Kamsin, Amirrudin and Pan, Zhuangzhuang},
-  journal={},
-  year={2026}
-}
-```
-
----
-
-## License
-
-This repository is released for academic research purposes only.
