@@ -137,27 +137,6 @@ On MECAD, BridgeProt obtains the best Emotion F1, Cause F1, and Pair F1 among th
 
 ---
 
-## Training Regime Results
-
-BridgeProt is evaluated under four operating regimes: `0-shot`, `3-shot`, `LoRA`, and `SFT`.
-
-| Dataset | Training | Best Modality | Emotion F1 | Cause F1 | Pair F1 |
-|---|---|---:|---:|---:|---:|
-| ECF | 0-shot | T+A | 51.12 | 55.08 | 26.54 |
-| ECF | 3-shot | T | 67.47 | 66.37 | 41.75 |
-| ECF | LoRA | T | **75.01** | 70.99 | 54.51 |
-| ECF | SFT | T+A | 73.94 | **72.35** | **54.55** |
-| MEC4 | 0-shot | T+A+V | 42.15 | 39.57 | 14.54 |
-| MEC4 | 3-shot | T | 48.84 | 43.46 | 20.89 |
-| MEC4 | LoRA | T+V | 65.41 | 57.59 | 40.64 |
-| MEC4 | SFT | T+A+V | **67.23** | **58.63** | **42.65** |
-| MECAD | 0-shot | T+A | 64.20 | 64.98 | 32.58 |
-| MECAD | 3-shot | T+A | 73.20 | 68.63 | 42.28 |
-| MECAD | LoRA | T | 76.10 | 74.40 | 54.88 |
-| MECAD | SFT | T+A | **77.54** | **74.67** | **57.89** |
-
----
-
 ## Ablation Study
 
 ### Free-Form Generation vs. BridgeProt
