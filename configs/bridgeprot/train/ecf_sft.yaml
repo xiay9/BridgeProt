@@ -1,0 +1,6 @@
+_base_: base.yaml
+dataset_name: ECF
+
+training:
+  method: sft
+  run_name: qwen35_9b_sft_minimal

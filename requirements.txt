@@ -1,0 +1,15 @@
+PyYAML
+datasets
+huggingface-hub
+numpy
+opencv-python
+peft
+scikit-learn
+sentence-transformers
+torch
+tqdm
+transformers
+trl
+unsloth
+vllm
+wandb

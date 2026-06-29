@@ -1,0 +1,4 @@
+_base_: ecf.yaml
+
+method:
+  name: fewshot

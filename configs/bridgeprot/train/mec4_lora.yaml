@@ -1,0 +1,7 @@
+_base_: base.yaml
+dataset_name: MEC4
+
+training:
+  method: lora
+  run_name: qwen35_9b_lora_minimal
+  learning_rate: 1.0e-4

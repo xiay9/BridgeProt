@@ -1,0 +1,61 @@
+run:
+  name: qwen35_9b
+  seed: 42
+  wandb_enabled: true
+  wandb_project: BridgeProt
+
+data:
+  split: test
+  max_dialogues: null
+  include_speaker: true
+  include_turn_id: true
+  use_audio: false
+  use_video: false
+  use_audio_summary: false
+  audio_summary_backend: opensmile_egemaps
+
+model:
+  model_name: Qwen/Qwen3.5-9B
+  tokenizer_name: null
+  trust_remote_code: false
+  dtype: auto
+  max_model_len: 8192
+  gpu_memory_utilization: 0.9
+  tensor_parallel_size: 0
+  enforce_eager: false
+  max_num_seqs: null
+  video_fps: 1.0
+  video_num_frames: 4
+  video_fallback_num_frames: [4, 2, 1]
+  video_max_edge: 224
+
+protocol:
+  max_records: 32
+  max_evidence_per_record: 4
+  max_bridge_chars: 256
+  max_explanation_chars: 512
+  require_explanation: true
+  enforce_temporal_precedence: false
+
+decode:
+  temperature: 0.0
+  top_p: 1.0
+  max_tokens: 1024
+  repetition_penalty: 1.0
+  output_mode: minimal
+
+method:
+  name: zeroshot
+  candidate_window: 6
+  max_emotion_windows: null
+  fallback_to_window_scan: true
+  max_context_turns: 12
+  max_stage2_causes_per_emotion: 3
+
+retrieval:
+  strategy: semantic
+  num_shots: 3
+  bank_split: train
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  max_bank_size: null
+  seed: 42

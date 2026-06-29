@@ -1,0 +1,4 @@
+_base_: mecad.yaml
+
+method:
+  name: fewshot
